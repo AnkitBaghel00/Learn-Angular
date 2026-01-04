@@ -19,3 +19,41 @@
        
     </div>
 </div>
+
+<div class="row">
+    <div class="col-3">
+        firstName => {{firstName}}
+        <br>
+        {{firstName | uppercase}}
+
+    </div>
+    <div class="col-3">
+        courseName => {{courseName}}
+        <br>
+        {{courseName | lowercase}}
+
+    </div>
+    <div class="col-3">
+        courseName => {{courseName}}
+        <br>
+        {{courseName | titlecase}}
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        rollNoList => {{rollNoList}}
+        <br>
+        {{rollNoList |slice:2:5}}
+    </div>
+    <div class="col-3">
+        studentObj => {{studentObj}}
+        <br>
+        {{studentObj |json}}
+    </div>
+    <div class="col-3">
+        curretDate => {{curretDate}}
+        <br>
+        {{curretDate |date}}
+    </div>
+</div>
