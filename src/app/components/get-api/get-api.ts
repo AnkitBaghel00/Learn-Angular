@@ -12,17 +12,19 @@ export class GetApi implements OnInit {
   http = inject(HttpClient);
   userList: any[] = [];
   todoList: any[] = [];
+  busUserList: any[] = [];
 
   ngOnInit(): void {
-    debugger;
+    
     this.getUsers();
     this.getTodoItems();
+    this.getAllBusBookingUsers();
   }
 
   getUsers() {
-    debugger;
+    
     this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((result:any) => {
-      debugger;
+      
       this.userList = result;
     })
   }
@@ -30,6 +32,12 @@ export class GetApi implements OnInit {
   getTodoItems() {
     this.http.get("https://jsonplaceholder.typicode.com/todos").subscribe((response:any) => {
       this.todoList = response;
+    })
+  }
+
+  getAllBusBookingUsers() {
+    this.http.get("https://api.freeprojectapi.com/api/BusBooking/GetAllUsers").subscribe((res:any)=>{
+      this.busUserList = res.data
     })
   }
 }

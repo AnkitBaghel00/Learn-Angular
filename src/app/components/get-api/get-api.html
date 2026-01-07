@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-6">
+    <div class="col-4">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -22,11 +22,34 @@
             </tbody>
         </table>
     </div>
-    <div class="col-6">
+    <div class="col-4">
         <ul>
             @for (item of todoList; track $index) {
                 <li>{{item.title}}</li>
             }
         </ul>
+    </div>
+    <div class="col-4">
+        <table class="table table-bordered">
+         <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>User Name</th>
+                    <th>Role</th>
+                    <th>Full Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of busUserList; track $index) {
+                    <tr>
+                        <td>{{item.userId}}</td>
+                        <td>{{item.userName}}</td>
+                        <td>{{item.role}}</td>
+                        <td>{{item.fullName}}</td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 </div>
